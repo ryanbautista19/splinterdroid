@@ -2,7 +2,7 @@ import urllib.request,json
 import sys,time
 
 def getEnemy(username):
-    with urllib.request.urlopen("https://api.splinterlands.io/players/outstanding_match?username="+username) as url:
+    with urllib.request.urlopen("https://game-api.splinterlands.com/players/outstanding_match?username="+username) as url:
         try:
             data = json.loads(url.read().decode())
         except:
@@ -11,7 +11,7 @@ def getEnemy(username):
         return data['opponent_player']
 
 def getEnemyCards(username):
-    with urllib.request.urlopen("https://api.splinterlands.io/players/outstanding_match?username=" + username) as url:
+    with urllib.request.urlopen("https://game-api.splinterlands.com/players/outstanding_match?username=" + username) as url:
         try:
             data = json.loads(url.read().decode())
         except:
@@ -20,7 +20,7 @@ def getEnemyCards(username):
         return json.loads(data['team'])
 
 def processCard(team,card_details):
-    print(type(team))
+    
     summoner_id = team['summoner'].split('-')[1]
     summoner_name = [a['name'] for a in card_details if a['id'] == int(summoner_id)][0]
     print(summoner_name)
