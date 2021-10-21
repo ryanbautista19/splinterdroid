@@ -8,7 +8,8 @@
 - `USER=` username
 - `POSTKEY=` postkey
 - `INTERVAL=0` time interval per battle
-- `ECR_THRESHOLD=65` energy capture rate limit to stop bot
+- `HEADLESS=True` enable/disable headless mode
 - `CUSTOM_PRIORITY=False` force custom lineup on certain match
+- `KEY=` license key 
 
 Discord: https://discord.gg/3t33beFCTF
