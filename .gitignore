@@ -1,2 +1,9 @@
 
 checkEnemyCards.py
+checkEnemyPrev.py
+battles.db
+.env
+bot.py
+custom.json
+dataAnalytics.py
+geckodriver.exe
